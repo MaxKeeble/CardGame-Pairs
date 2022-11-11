@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div class="timer-output" id="timer-output"></div>
+    <div class="square" id="square">
+      <div class="modal-end" id="modal-end"></div>
+    </div>
+    <button class="button restart-btn" id="restart-btn">Сыграть ещё раз</button>
+    <form action="https://postman-echo.com/post" method="post" class="form" id="form">
+      <label for="cards" class="part-of-form">
+        <div class="legend">Количествово карточек по вертикали/горизонтали</div>
+        <input type="number" name="cards" min="2" max="10" step="2" value="4" class="cards" id="cards">
+      </label>
+      <input type="submit" value="Начать игру" class="start-btn" id="start-btn">
+    </form>
+  </div>
+</body>
+
+</html>

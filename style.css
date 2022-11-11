@@ -1,0 +1,124 @@
+*{
+  user-select: none;
+}
+
+body {
+  margin: 0;
+}
+
+.timer-output {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: none;
+  width: 100px;
+  height: 20px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.square {
+  position: relative;
+  box-sizing: border-box;
+  display: none;
+  margin: 20px auto;
+  padding: 5px;
+  width: calc((100vh - 80px)/1.2);
+  height: calc(100vh - 80px);
+  border: 2px dotted red;
+  text-align: center;
+}
+
+.modal-end {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 54px;
+  font-family: sans-serif;
+  text-shadow: 0 0 3px white, 0 0 14px white, 0 0 12px white, 0 0 10px white, 0 0 3px white, 0 0 14px white, 0 0 12px white;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+.scene {
+  margin: 5px;
+  perspective: 800px;
+}
+
+.card {
+  position: relative;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 5px gray;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background-image: url(333.jpg);
+  background-position: center;
+  background-size: 58%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-shadow: 0 0 2px rgba(255, 255, 255, .8);
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.card.done>.face {
+  transition: filter 0.2s var(--delay);
+  filter: blur(3px);
+}
+
+.card.done {
+  cursor: auto;
+}
+
+.restart-btn {
+  display: none;
+  margin: 0 auto 10px;
+  min-width: 150px;
+  min-height: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.part-of-form>* {
+  margin-bottom: 10px;
+}
+
+.part-of-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
